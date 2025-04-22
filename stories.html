@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CareBloom - Stories from real caregivers." />
+  <title>Stories - CareBloom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="main.css" rel="stylesheet" />
+  <style>
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+    .cards .card {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+    .cards .card:nth-child(1) { animation-delay: 0.2s; }
+    .cards .card:nth-child(2) { animation-delay: 0.4s; }
+    .cards .card:nth-child(3) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="carebloom.lightmode.png" alt="CareBloom Logo" class="logo-img" />
+      <span class="brand-name">CareBloom</span>
+    </div>
+    <nav id="navbar">
+      <div class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="menu-links">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="resources.html" class="nav-link"><i class="fas fa-book"></i> Resources</a>
+        <a href="community.html" class="nav-link active"><i class="fas fa-users"></i> Community</a>
+        <a href="stories.html" class="nav-link"><i class="fas fa-comment-dots"></i> Stories</a>
+        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+        <a href="#" class="logout-link" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+      <button id="dark-mode-toggle" class="btn-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section main-section active" id="stories">
+      <h2 class="fade-in-up">Caregiver Stories</h2>
+      <p class="fade-in-up">Read heartwarming and inspiring experiences from caregivers around the world.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Maria's Journey</h3>
+          <p>"CareBloom gave me hope when I felt alone. Sharing my story helped me heal and connect."</p>
+        </article>
+        <article class="card">
+          <h3>David's Dedication</h3>
+          <p>"Being a caregiver to my mother has taught me patience, strength, and love beyond measure."</p>
+        </article>
+        <article class="card">
+          <h3>Anna & Her Sister</h3>
+          <p>"We navigated our family's challenges together — and CareBloom was there to support us."</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CareBloom. Nurturing care, every step of the way.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

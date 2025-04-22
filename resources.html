@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CareBloom - Helpful caregiving resources." />
+  <title>Resources - CareBloom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="main.css" rel="stylesheet" />
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .cards .card {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .cards .card:nth-child(1) { animation-delay: 0.2s; }
+    .cards .card:nth-child(2) { animation-delay: 0.4s; }
+    .cards .card:nth-child(3) { animation-delay: 0.6s; }
+    .cards .card:nth-child(4) { animation-delay: 0.8s; }
+    .cards .card:nth-child(5) { animation-delay: 1s; }
+    .cards .card:nth-child(6) { animation-delay: 1.2s; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="carebloom.lightmode.png" alt="CareBloom Logo" class="logo-img" />
+      <span class="brand-name">CareBloom</span>
+    </div>
+    <nav id="navbar">
+      <div class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="menu-links">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="resources.html" class="nav-link active"><i class="fas fa-book"></i> Resources</a>
+        <a href="community.html" class="nav-link"><i class="fas fa-users"></i> Community</a>
+        <a href="stories.html" class="nav-link"><i class="fas fa-comment-dots"></i> Stories</a>
+        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+        <a href="#" class="logout-link" id="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+      <button id="dark-mode-toggle" class="btn-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section main-section active" id="resources">
+      <h2 class="fade-in-up">Resources</h2>
+      <p class="fade-in-up">Explore helpful resources that can guide you on your caregiving journey.</p>
+      <div class="cards">
+        <article class="card"><i class="fas fa-heartbeat"></i><h3>Caregiving Tips</h3><p>Learn practical tips for providing the best care to your loved ones.</p></article>
+        <article class="card"><i class="fas fa-notes-medical"></i><h3>Health & Wellness</h3><p>Find resources that promote physical and emotional well-being.</p></article>
+        <article class="card"><i class="fas fa-gavel"></i><h3>Legal Support</h3><p>Get informed about legal rights and resources for caregivers.</p></article>
+        <article class="card"><i class="fas fa-brain"></i><h3>Mental Health</h3><p>Tools and strategies to support mental wellness for both caregivers and their loved ones.</p></article>
+        <article class="card"><i class="fas fa-utensils"></i><h3>Nutrition & Diet</h3><p>Find meal planning tips and nutritional guides tailored for various caregiving needs.</p></article>
+        <article class="card"><i class="fas fa-users"></i><h3>Support Groups</h3><p>Connect with other caregivers through online and local support communities.</p></article>
+      </div>
+    </section>
+  
+<section class="more-resources">
+  <h2>🌟 Featured Caregiver Tools</h2>
+  <p>Discover platforms and digital tools designed to simplify your caregiving routine.</p>
+  <div class="extra-resource-cards">
+    <div class="extra-card">
+      <i class="fas fa-notes-medical"></i>
+      <h3>CareZone</h3>
+      <p>Track medications, appointments, and health notes all in one place.</p>
+    </div>
+    <div class="extra-card">
+      <i class="fas fa-share-alt"></i>
+      <h3>CaringBridge</h3>
+      <p>Connect and share updates with loved ones to build your support circle.</p>
+    </div>
+    <div class="extra-card">
+      <i class="fas fa-clipboard-list"></i>
+      <h3>Trello for Caregivers</h3>
+      <p>Organize daily care tasks and routines with flexible task boards.</p>
+    </div>
+  </div>
+</section>
+
+<section class="caregiver-testimonial">
+  <blockquote>
+    “The CareBloom resources helped me feel less overwhelmed and more connected to a community that truly understands.”<br>
+    <cite>– Ana R., caregiver for her father</cite>
+  </blockquote>
+</section>
+
+<section class="download-kit">
+  <h2>📥 Download Our Free Caregiver Starter Kit</h2>
+  <p>Includes daily planner templates, emergency contacts sheet, and nutrition tips.</p>
+  <a href="caregiver_kit.pdf" class="btn-primary" download>Download PDF</a>
+</section>
+
+</main>
+
+  <footer>
+    <p>&copy; 2025 CareBloom. Nurturing care, every step of the way.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

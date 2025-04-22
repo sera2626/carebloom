@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="CareBloom - Your care matters, we're here to help." name="description"/>
+  <meta content="care, caregiving, support, health, community, resources" name="keywords"/>
+  <title>
+   CareBloom
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+  <link href="main.css" rel="stylesheet"/>
+  <style>
+   .main-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .main-section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 4rem;
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .quote-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .quote-section blockquote {
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text-color);
+    }
+    .quote-section cite {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #718096;
+    }
+    .hamburger-menu {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+    }
+    .hamburger-menu .bar {
+      width: 25px;
+      height: 3px;
+      background-color: var(--text-color);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      .menu-links {
+        display: none;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 1000;
+      }
+      .menu-links.open {
+        display: flex !important;
+      }
+      .hamburger-menu {
+        display: flex;
+      }
+    }
+  </style>
+ 
+  
+
+</head>
+ <body>
+  <header>
+   <div class="logo-container">
+    <img alt="CareBloom Logo" class="logo-img" src="carebloom.lightmode.png"/>
+    <span class="brand-name">
+     CareBloom
+    </span>
+   </div>
+   <nav id="navbar">
+    <div aria-expanded="false" aria-label="Toggle navigation" class="hamburger-menu" id="hamburger-menu">
+     <div class="bar">
+     </div>
+     <div class="bar">
+     </div>
+     <div class="bar">
+     </div>
+    </div>
+    <div class="menu-links">
+     <a class="nav-link" data-section="home" href="#">
+      <i class="fas fa-home">
+      </i>
+      Home
+     </a>
+     <a class="nav-link" href="resources.html">
+      <i class="fas fa-book">
+      </i>
+      Resources
+     </a>
+     <a class="nav-link" href="community.html">
+      <i class="fas fa-users">
+      </i>
+      Community
+     </a>
+     <a class="nav-link" href="stories.html">
+      <i class="fas fa-comment-dots">
+      </i>
+      Stories
+     </a>
+     <a class="nav-link" href="contact.html">
+      <i class="fas fa-envelope">
+      </i>
+      Contact Us
+     </a>
+     <a class="logout-link" href="#" id="logout-link">
+      <i class="fas fa-sign-out-alt">
+      </i>
+      Logout
+     </a>
+    </div>
+    <button class="btn-toggle" id="dark-mode-toggle">
+     🌙
+    </button>
+   </nav>
+  </header>
+  <main>
+   <section class="hero main-section fade-in" id="home">
+    <div class="hero-content slide-in">
+     <h1>
+      Welcome to CareBloom
+     </h1>
+     <p>
+      Your Care Matters. We&rsquo;re Here to Help 🌿
+     </p>
+     <button class="btn-primary pulse" id="start-btn">
+      Start Your Journey
+     </button>
+    </div>
+    <div class="section" style="margin-top: 4rem;">
+     <h2>
+      About CareBloom
+     </h2>
+     <p>
+      CareBloom is your safe space for care, healing, and connection. Whether you're a caregiver or seeking support, we're here for you every step of the way.
+     </p>
+     <div class="cards" style="margin-top: 2rem;">
+      <div class="card fade-slide fade-delay-1">
+       <i class="fas fa-hand-holding-heart" style="color: #10b981;">
+       </i>
+       <h3>
+        Supportive Community
+       </h3>
+       <p>
+        Connect with others who understand your journey and are ready to help.
+       </p>
+      </div>
+      <div class="card fade-slide fade-delay-2">
+       <i class="fas fa-book-medical" style="color: #2563eb;">
+       </i>
+       <h3>
+        Trusted Resources
+       </h3>
+       <p>
+        Access guides, tips, and expert advice tailored for caregivers.
+       </p>
+      </div>
+      <div class="card fade-slide fade-delay-3">
+       <i class="fas fa-seedling" style="color: #a3e635;">
+       </i>
+       <h3>
+        Growth &amp; Wellness
+       </h3>
+       <p>
+        Discover ways to take care of your emotional and physical health.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="section" style="margin-top: 4rem;">
+     <h2>
+      A Day in the Life of a Caregiver
+     </h2>
+     <p>
+      Watch heartfelt stories and experiences from real caregivers.
+     </p>
+     <div class="video-wrapper">
+      <iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/7EICZGYYSVU" title="Caregiver Video">
+      </iframe>
+     </div>
+    </div>
+    <div class="section" style="margin-top: 4rem;">
+     <h2>
+      Why Choose CareBloom?
+     </h2>
+     <ul style="text-align: left; max-width: 800px; margin: 1.5rem auto 0; line-height: 1.8;">
+      <li>
+       ✅ Personalized resources tailored to caregivers' needs
+      </li>
+      <li>
+       ✅ Safe, inclusive community space for connection
+      </li>
+      <li>
+       ✅ Regular updates, webinars, and expert Q&amp;A
+      </li>
+      <li>
+       ✅ Easy-to-navigate interface with dark mode support
+      </li>
+     </ul>
+    </div>
+    <div class="section" style="margin-top: 4rem;">
+     <h2>
+      Caregiver Voices
+     </h2>
+     <blockquote style="font-style: italic; font-size: 1.1rem; max-width: 700px; margin: 1rem auto; color: #4a5568;">
+      &ldquo;CareBloom has truly been a lifeline during my caregiving journey. I&rsquo;ve found a community that understands and supports me every step of the way.&rdquo;
+     </blockquote>
+     <cite style="display: block; text-align: center; color: #718096;">
+      &ndash; Maria L., full-time caregiver
+     </cite>
+    </div>
+    <div class="quote-section section" style="margin-top: 3rem; text-align: center;">
+     <blockquote style="font-size: 1.2rem; font-style: italic; color: #4a5568;">
+      &ldquo;To care for those who once cared for us is one of the highest honors.&rdquo;
+     </blockquote>
+     <cite style="display: block; margin-top: 0.5rem; font-size: 0.95rem;">
+      &ndash; Tia Walker
+     </cite>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <p>
+    &copy; 2025 CareBloom. Nurturing care, every step of the way.
+   </p>
+  </footer>
+  <script src="script.js">
+  </script>
+ </body>
+</html>

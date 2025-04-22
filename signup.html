@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | CareBloom</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" width="200" height="50">
+        <text x="10" y="35" font-family="Inter, sans-serif" font-size="32" font-weight="700" fill="#10b981">Care</text>
+        <text x="85" y="35" font-family="Inter, sans-serif" font-size="32" font-weight="700" fill="#2563eb">Bloom</text>
+      </svg>
+    </div>
+  </header>
+
+  <section class="auth-section">
+    <h2>Sign Up for CareBloom</h2>
+    <form id="signup-form">
+      <div class="input-group">
+        <label for="first-name">First Name</label>
+        <input type="text" id="first-name" required placeholder="Enter your first name" />
+        <small id="first-name-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="last-name">Last Name</label>
+        <input type="text" id="last-name" required placeholder="Enter your last name" />
+        <small id="last-name-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required placeholder="Enter your email" />
+        <small id="email-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required placeholder="Enter your password" />
+        <i id="toggle-icon-password" class="fa fa-eye-slash" onclick="togglePassword('password')"></i>
+        <small id="password-error" class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" required placeholder="Confirm your password" />
+        <small id="confirm-password-error" class="error-message"></small>
+      </div>
+
+      <div class="checkbox-group">
+        <label for="terms" class="terms-label">
+          <input type="checkbox" id="terms" />
+          I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
+        </label>
+        <small id="terms-error" class="error-message"></small>
+      </div>
+
+      <button type="submit" class="btn-primary">Sign Up</button>
+    </form>
+  </section>
+
+  <script src="signup.js"></script>
+</body>
+</html>

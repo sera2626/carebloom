@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CareBloom - Connect with the caregiving community." />
+  <title>Community - CareBloom</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="main.css" rel="stylesheet" />
+  <style>
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+      opacity: 0;
+    }
+
+    .cards .card {
+      animation: fadeInUp 0.6s ease forwards;
+      opacity: 0;
+    }
+
+    .cards .card:nth-child(1) { animation-delay: 0.2s; }
+    .cards .card:nth-child(2) { animation-delay: 0.4s; }
+    .cards .card:nth-child(3) { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="carebloom.lightmode.png" alt="CareBloom Logo" class="logo-img">
+      <span class="brand-name">CareBloom</span>
+    </div>
+    <nav id="navbar">
+      <div class="hamburger-menu" id="hamburger-menu" aria-label="Toggle navigation" aria-expanded="false">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <div class="menu-links">
+        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="resources.html" class="nav-link"><i class="fas fa-book"></i> Resources</a>
+        <a href="community.html" class="nav-link active"><i class="fas fa-users"></i> Community</a>
+        <a href="stories.html" class="nav-link"><i class="fas fa-comment-dots"></i> Stories</a>
+        <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact Us</a>
+        <a href="#" id="logout-link" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a>
+      </div>
+      <button id="dark-mode-toggle" class="btn-toggle">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section main-section active" id="community">
+      <h2 class="fade-in-up">Community</h2>
+      <p class="fade-in-up">Connect with fellow caregivers and share your journey.</p>
+      <div class="cards">
+        <article class="card">
+          <i class="fas fa-hands-helping"></i>
+          <h3>Peer Support</h3>
+          <p>Share your stories and find encouragement from other caregivers.</p>
+        </article>
+        <article class="card">
+          <i class="fas fa-users"></i>
+          <h3>Care Circles</h3>
+          <p>Form or join small groups to exchange advice and support.</p>
+        </article>
+        <article class="card">
+          <i class="fas fa-calendar-alt"></i>
+          <h3>Events & Meetups</h3>
+          <p>Join virtual meetups and events curated for caregivers.</p>
+        </article>
+      </div>
+    </section>
+  
+<section class="caregiver-gallery">
+  <h2>👩‍🦳 Caregiver Moments</h2>
+  <p>Take a glimpse into the lives of caregivers making a difference every day.</p>
+  <div class="gallery-images">
+    <img src="caregiver-1.jpg" alt="Caregiver Image 1">
+    <img src="caregiver-2.jpg" alt="Caregiver Image 2">
+    <img src="caregiver-3.jpg" alt="Caregiver Image 3">
+  </div>
+</section>
+
+
+<section class="featured-caregiver">
+  <h2>🌟 Featured Caregiver: Juve “Jovy” Alcantara</h2>
+  <div class="caregiver-story">
+    <img src="juve.png" alt="Jovy Alcantara" class="caregiver-image">
+    <p>
+      Juve Alcantara, known as Jovy, grew up in the Philippines with dreams of becoming a nurse. Although financial constraints led her to a different career in tourism, her heart never left the path of caregiving.
+      <br><br>
+      “My passion of being a great caregiver motivates me every day,” she shares. Her dedication has touched many lives, and her story continues to inspire caregivers around the world.
+    </p>
+    <a href="https://www.championthechallenges.org/my-passion-of-being-a-great-caregiver-motivates-me-every-day/" class="btn-primary" target="_blank">
+      Read Jovy’s Full Story
+    </a>
+  </div>
+</section>
+
+
+<section class="upcoming-events">
+  <h2>📅 Upcoming Virtual Meetups</h2>
+  <div class="event-list">
+    <div class="event-item">
+      <p><strong>Caregiver Wellness Webinar</strong><br>Join us for a session on managing stress and balancing caregiving.</p>
+    </div>
+    <div class="event-item">
+      <p><strong>Support Group for Caregivers</strong><br>Connect with other caregivers and share your journey.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <footer>
+    <p>&copy; 2025 CareBloom. Nurturing care, every step of the way.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
